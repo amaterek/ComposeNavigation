@@ -1,0 +1,78 @@
+ext.buildConfig = [
+        minSdk    : 26,
+        targetSdk : 32,
+        compileSdk: 33,
+        buildTools: '33.0.0'
+]
+
+def version = [
+        androidGradlePlugin: '7.3.0',
+        kotlin             : '1.7.10',
+        coroutines         : '1.6.3',
+        androidx           : [
+                activity     : "1.6.0",
+                appcompat    : '1.5.1',
+                core         : '1.9.0',
+                compose      : "1.3.0-beta03",
+                composeCompiler : "1.3.1",
+                lifecycle    : "2.5.1",
+                hilt         : "1.0.0",
+                navigation   : "2.5.2",
+        ],
+        gson               : '2.9.0',
+        hilt               : '2.44',
+]
+ext.versions = version
+
+ext.plugin = [
+        android: "com.android.tools.build:gradle:${version.androidGradlePlugin}",
+        kotlin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${version.kotlin}",
+        hilt   : "com.google.dagger:hilt-android-gradle-plugin:${version.hilt}",
+]
+
+ext.lib = [
+        kotlin     : [
+                stdlib        : "org.jetbrains.kotlin:kotlin-stdlib",
+                coroutines    : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${version.coroutines}",
+                test          : "org.jetbrains.kotlin:kotlin-test-junit",
+                testCoroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${version.coroutines}",
+        ],
+        androidx   : [
+                activity : [
+                        ktx    : "androidx.activity:activity-ktx:${version.androidx.activity}",
+                        compose: "androidx.activity:activity-compose:${version.androidx.activity}",
+                ],
+                appcompat: "androidx.appcompat:appcompat:${version.androidx.appcompat}",
+                compose  : [
+                        foundation   : "androidx.compose.foundation:foundation:${version.androidx.compose}",
+                        material     : "androidx.compose.material:material:${version.androidx.compose}",
+                        materialIcons: "androidx.compose.material:material-icons-extended:${version.androidx.compose}",
+                        runtime      : "androidx.compose.runtime:runtime:${version.androidx.compose}",
+                        tooling      : "androidx.compose.ui:ui-tooling:${version.androidx.compose}",
+                        preview      : "androidx.compose.ui:ui-tooling-preview:${version.androidx.compose}",
+                        ui           : "androidx.compose.ui:ui:${version.androidx.compose}",
+                        uiTest       : "androidx.compose.ui:ui-test-junit4:${version.androidx.compose}",
+                ],
+                hilt     : [
+                        composeNavigation: "androidx.hilt:hilt-navigation-compose:${version.androidx.hilt}"
+                ],
+                lifecycle: [
+                        livedata: "androidx.lifecycle:lifecycle-livedata-ktx:${version.androidx.lifecycle}",
+                        viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${version.androidx.lifecycle}",
+                ],
+                navigation: [
+                        common: "androidx.navigation:navigation-common-ktx:${version.androidx.navigation}",
+                        runtime: "androidx.navigation:navigation-runtime-ktx:${version.androidx.navigation}",
+                        compose: "androidx.navigation:navigation-compose:${version.androidx.navigation}",
+                ],
+        ],
+        gson       : "com.google.code.gson:gson:${version.gson}",
+        hilt       : [
+                android    : "com.google.dagger:hilt-android:${version.hilt}",
+                kapt       : "com.google.dagger:hilt-compiler:${version.hilt}",
+        ],
+]
+
+ext.commonCompileArgs = [
+        "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+]

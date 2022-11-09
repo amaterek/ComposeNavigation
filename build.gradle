@@ -1,0 +1,27 @@
+// Toplevel build file where you can add configuration options common to all subprojects/modules.
+buildscript {
+    apply from: "config.gradle"
+
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath plugin.android
+        classpath plugin.kotlin
+        classpath plugin.hilt
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

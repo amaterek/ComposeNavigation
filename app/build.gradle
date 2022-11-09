@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk buildConfig.compileSdk
+    buildToolsVersion buildConfig.buildTools
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+
+        minSdk buildConfig.minSdk
+        targetSdk buildConfig.targetSdk
+        compileSdkVersion buildConfig.compileSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug { }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = versions.androidx.composeCompiler
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+        freeCompilerArgs += commonCompileArgs
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+    implementation lib.hilt.android
+    kapt lib.hilt.kapt
+
+    implementation lib.androidx.appcompat
+    implementation lib.androidx.activity.compose
+    implementation lib.androidx.hilt.composeNavigation
+    implementation lib.androidx.lifecycle.viewModel
+
+    implementation lib.androidx.compose.foundation
+    implementation lib.androidx.compose.material
+    implementation lib.androidx.compose.runtime
+    implementation lib.androidx.compose.preview
+    debugImplementation lib.androidx.compose.tooling
+
+    implementation project(':util:compose:navigation')
+}

@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+android {
+    defaultConfig {
+        minSdk buildConfig.minSdk
+        targetSdk buildConfig.targetSdk
+        compileSdkVersion buildConfig.compileSdk
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = versions.androidx.composeCompiler
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+        freeCompilerArgs += commonCompileArgs
+    }
+}
+
+dependencies {
+    api lib.androidx.navigation.compose
+    implementation lib.androidx.appcompat
+    implementation lib.androidx.lifecycle.livedata
+    implementation lib.gson
+}
