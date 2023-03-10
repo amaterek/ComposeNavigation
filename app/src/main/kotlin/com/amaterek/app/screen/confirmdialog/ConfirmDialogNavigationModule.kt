@@ -1,6 +1,6 @@
 package com.amaterek.app.screen.confirmdialog
 
-import com.amaterek.ui.compose.navigation.DestinationRoute
+import com.amaterek.ui.navigation.compose.DestinationRouteWithBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,6 +15,6 @@ internal object ConfirmDialogNavigationModule {
     @Provides
     @Singleton
     @IntoSet
-    fun providesConfirmDialogDestination(): DestinationRoute<*> =
+    fun providesConfirmDialogDestination(): DestinationRouteWithBuilder<*> =
         ConfirmDialogDestination
 }

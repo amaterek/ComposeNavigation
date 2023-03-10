@@ -1,6 +1,6 @@
 package com.amaterek.app.screen.splash
 
-import com.amaterek.ui.compose.navigation.DestinationRoute
+import com.amaterek.ui.navigation.compose.DestinationRouteWithBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,5 +15,5 @@ internal object SplashNavigationModule {
     @Provides
     @Singleton
     @IntoSet
-    fun providesSplashDestination(): DestinationRoute<*> = SplashDestination
+    fun providesSplashDestination(): DestinationRouteWithBuilder<*> = SplashDestination
 }

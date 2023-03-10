@@ -1,6 +1,6 @@
 package com.amaterek.app.screen.home
 
-import com.amaterek.ui.compose.navigation.DestinationRoute
+import com.amaterek.ui.navigation.compose.DestinationRouteWithBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,5 +15,5 @@ internal object HomeNavigationModule {
     @Provides
     @Singleton
     @IntoSet
-    fun providesHomeDestination(): DestinationRoute<*> = HomeDestination
+    fun providesHomeDestination(): DestinationRouteWithBuilder<*> = HomeDestination
 }

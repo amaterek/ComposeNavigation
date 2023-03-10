@@ -1,5 +1,6 @@
 package com.amaterek.app.screen.confirmdialog
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,19 +15,27 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.amaterek.ui.compose.navigation.LocalNavigator
-import com.amaterek.ui.compose.navigation.navigateBackWithResult
+import com.amaterek.ui.navigation.LocalNavigator
+import com.amaterek.ui.navigation.navigateBackWithResult
 
 @Composable
 internal fun ConfirmDialog() {
     val navigator = LocalNavigator.current
 
+    fun navigateBackWithResult(result: Boolean) {
+        navigator.navigateBackWithResult(ConfirmDialogDestination, result = result)
+    }
+
+    BackHandler {
+        navigateBackWithResult(result = false)
+    }
+
     fun confirm() {
-        navigator.navigateBackWithResult(ConfirmDialogDestination, result = true)
+        navigateBackWithResult(result = true)
     }
 
     fun cancel() {
-        navigator.navigateBackWithResult(ConfirmDialogDestination, result = false)
+        navigateBackWithResult(result = false)
     }
 
     Card(modifier = Modifier) {

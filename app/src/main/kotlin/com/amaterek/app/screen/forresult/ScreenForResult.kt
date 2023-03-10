@@ -15,8 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.amaterek.ui.compose.navigation.LocalNavigator
-import com.amaterek.ui.compose.navigation.navigateBackWithResult
+import com.amaterek.ui.navigation.LocalNavigator
+import com.amaterek.ui.navigation.navigateBackWithResult
 
 @Composable
 internal fun ScreenForResult(title: String) {

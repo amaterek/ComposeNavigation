@@ -1,4 +1,4 @@
-package com.amaterek.ui.compose.navigation
+package com.amaterek.ui.navigation
 
 interface DestinationForResult<T> {
     val resultKey: String
