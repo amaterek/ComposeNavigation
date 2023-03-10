@@ -5,6 +5,8 @@ plugins {
 }
 
 android {
+    namespace 'com.amaterek.ui.compose.navigation'
+
     defaultConfig {
         minSdk buildConfig.minSdk
         targetSdk buildConfig.targetSdk
