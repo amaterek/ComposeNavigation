@@ -1,6 +1,6 @@
 package com.amaterek.app.screen.confirmdialog
 
-import com.amaterek.util.compose.navigation.DestinationRoute
+import com.amaterek.ui.compose.navigation.DestinationRoute
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

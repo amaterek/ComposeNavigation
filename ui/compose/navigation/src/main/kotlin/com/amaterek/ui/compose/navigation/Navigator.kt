@@ -1,16 +1,16 @@
-package com.amaterek.util.compose.navigation
+package com.amaterek.ui.compose.navigation
 
 import android.util.Log
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.lifecycle.asFlow
 import androidx.navigation.NavController
-import com.amaterek.util.compose.navigation.destination.ControlDestinations
-import com.amaterek.util.compose.navigation.destination.Destination
-import com.amaterek.util.compose.navigation.destination.DialogDestination
-import com.amaterek.util.compose.navigation.destination.PreviousDestination
-import com.amaterek.util.compose.navigation.destination.PreviousDestinationWithResult
-import com.amaterek.util.compose.navigation.destination.ReplaceCurrentDestination
-import com.amaterek.util.compose.navigation.destination.ScreenDestination
+import com.amaterek.ui.compose.navigation.destination.ControlDestinations
+import com.amaterek.ui.compose.navigation.destination.Destination
+import com.amaterek.ui.compose.navigation.destination.DialogDestination
+import com.amaterek.ui.compose.navigation.destination.PreviousDestination
+import com.amaterek.ui.compose.navigation.destination.PreviousDestinationWithResult
+import com.amaterek.ui.compose.navigation.destination.ReplaceCurrentDestination
+import com.amaterek.ui.compose.navigation.destination.ScreenDestination
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.onCompletion
 

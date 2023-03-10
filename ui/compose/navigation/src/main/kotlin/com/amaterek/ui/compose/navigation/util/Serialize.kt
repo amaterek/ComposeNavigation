@@ -1,4 +1,4 @@
-package com.amaterek.util.compose.navigation.util
+package com.amaterek.ui.compose.navigation.util
 
 import android.util.Base64
 import com.google.gson.Gson

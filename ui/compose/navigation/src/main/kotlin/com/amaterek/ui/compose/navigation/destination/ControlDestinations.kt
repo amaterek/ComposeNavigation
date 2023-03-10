@@ -1,4 +1,4 @@
-package com.amaterek.util.compose.navigation.destination
+package com.amaterek.ui.compose.navigation.destination
 
 sealed interface ControlDestinations : Destination
 

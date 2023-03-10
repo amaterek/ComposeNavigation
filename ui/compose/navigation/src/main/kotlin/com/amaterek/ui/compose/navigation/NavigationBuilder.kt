@@ -1,4 +1,4 @@
-package com.amaterek.util.compose.navigation
+package com.amaterek.ui.compose.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.window.DialogProperties
@@ -6,10 +6,10 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
-import com.amaterek.util.compose.navigation.destination.ARGUMENT_NAME
-import com.amaterek.util.compose.navigation.destination.DialogDestination
-import com.amaterek.util.compose.navigation.destination.ScreenDestination
-import com.amaterek.util.compose.navigation.util.deserializeParcelable
+import com.amaterek.ui.compose.navigation.destination.ARGUMENT_NAME
+import com.amaterek.ui.compose.navigation.destination.DialogDestination
+import com.amaterek.ui.compose.navigation.destination.ScreenDestination
+import com.amaterek.ui.compose.navigation.util.deserializeParcelable
 import kotlin.reflect.KClass
 
 class NavigationBuilder(

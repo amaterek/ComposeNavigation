@@ -1,4 +1,4 @@
-package com.amaterek.util.compose.navigation
+package com.amaterek.ui.compose.navigation
 
 interface DestinationRoute<ArgumentType> {
 

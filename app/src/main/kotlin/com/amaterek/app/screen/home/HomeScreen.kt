@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.amaterek.app.screen.confirmdialog.ConfirmDialogDestination
 import com.amaterek.app.screen.forresult.ScreenForResultDestination
-import com.amaterek.util.compose.navigation.LocalNavigator
+import com.amaterek.ui.compose.navigation.LocalNavigator
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

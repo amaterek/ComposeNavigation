@@ -68,5 +68,5 @@ dependencies {
     implementation lib.androidx.compose.preview
     debugImplementation lib.androidx.compose.tooling
 
-    implementation project(':util:compose:navigation')
+    implementation project(':ui:compose:navigation')
 }

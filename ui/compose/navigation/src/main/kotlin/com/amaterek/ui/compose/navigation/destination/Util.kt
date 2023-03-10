@@ -1,6 +1,6 @@
-package com.amaterek.util.compose.navigation.destination
+package com.amaterek.ui.compose.navigation.destination
 
-import com.amaterek.util.compose.navigation.util.serializeToString
+import com.amaterek.ui.compose.navigation.util.serializeToString
 
 fun String.routeWithArgument(): String = "$this/{$ARGUMENT_NAME}"
 

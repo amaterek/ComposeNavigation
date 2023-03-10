@@ -1,10 +1,10 @@
 package com.amaterek.app.screen.confirmdialog
 
-import com.amaterek.util.compose.navigation.DestinationForResult
-import com.amaterek.util.compose.navigation.DestinationRoute
-import com.amaterek.util.compose.navigation.NavigationBuilder
-import com.amaterek.util.compose.navigation.addDestination
-import com.amaterek.util.compose.navigation.destination.DialogDestination
+import com.amaterek.ui.compose.navigation.DestinationForResult
+import com.amaterek.ui.compose.navigation.DestinationRoute
+import com.amaterek.ui.compose.navigation.NavigationBuilder
+import com.amaterek.ui.compose.navigation.addDestination
+import com.amaterek.ui.compose.navigation.destination.DialogDestination
 
 object ConfirmDialogDestination :
     DialogDestination, DestinationRoute<Unit>, DestinationForResult<Boolean> {

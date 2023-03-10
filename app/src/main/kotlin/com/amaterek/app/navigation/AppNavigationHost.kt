@@ -5,11 +5,11 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.amaterek.util.compose.navigation.DestinationRoute
-import com.amaterek.util.compose.navigation.LocalNavigator
-import com.amaterek.util.compose.navigation.NavigationBuilder
-import com.amaterek.util.compose.navigation.Navigator
-import com.amaterek.util.compose.navigation.destination.ScreenDestination
+import com.amaterek.ui.compose.navigation.DestinationRoute
+import com.amaterek.ui.compose.navigation.LocalNavigator
+import com.amaterek.ui.compose.navigation.NavigationBuilder
+import com.amaterek.ui.compose.navigation.Navigator
+import com.amaterek.ui.compose.navigation.destination.ScreenDestination
 import javax.inject.Inject
 
 class AppNavigationHost @Inject constructor(
